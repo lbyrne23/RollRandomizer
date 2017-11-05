@@ -37,11 +37,11 @@
   </style>
 <body>
 
-<div class="container col-md-12">
+<div>
 <p id="giz"><input id="clickMe" type="button" value="giz a roll there" onclick="chicky();" /></p>
 </div>
 
-<div class="container col-md-12" id="options">
+<div id="options">
 	<p id="bread"></p>
 	<p id="chicken"></p>
 	<p id="butter"></p>
@@ -83,44 +83,6 @@ function chicky(){
 	document.getElementById("filling2").innerHTML = fillingArray[filling_2]; 
 	document.getElementById("filling3").innerHTML = fillingArray[filling_3]; 
 }
-function breadplz(){
-	
-			var bread = Math.floor((Math.random() * 5) + 0);
-			var breadArray = ["Brown Roll", "White Roll", "Wrap", "Bap", "Sliced Pan"];
-			document.getElementById("bread").innerHTML = breadArray[bread]; 
-	
-}
-function sauceplz(){
-    var sauce = Math.floor((Math.random() * 14) + 0);
-    var sauceArray = ["Ketchup", "Mayonnaise", "Garlic Mayo Sauce","BBQ Sauce","Brown Sauce","Sweet Chilli Sauce","Salsa","Mustard","Relish","Pesto","Taco Sauce","Curry Sauce","Hot Sauce","Chipotle"];
-    document.getElementById("sauce").innerHTML = sauceArray[sauce]; 
-    
-}
-function butterplz(){
-    var butteryorn = Math.floor((Math.random() * 2) + 0);
-    var butterArray = ["Butter", "No Butter"];
-    document.getElementById("butter").innerHTML = butterArray[butteryorn];
-}
-function chickplz(){
-    var chicken = Math.floor((Math.random() * 3) + 0);
-    var chickArray = ["Plain Chicken", "Southern Fried Chicken", "Spicy Chicken"];
-    document.getElementById("chicken").innerHTML = chickArray[chicken];
-    
-}
-function fillingplz(){
-    var filling_1 = Math.floor((Math.random() * 27) + 0);
-    var fillingArray = ["Olives","Turkey","Cucumber","Gherkins","Lettuce","Red Onions","Crispy Onions","Coleslaw","Mixed Peppers","Chicken Tikka","Jalapenos","Egg Mayonnaise","Tuna","Mushrooms","Wedges","Cheese","Stuffing","Tomato","Sundried Tomato","Egg","Rashers","Sweetcorn","Beetroot","Veg Salad","Ham","Couscous","-"];
-	document.getElementById("filling1").innerHTML = fillingArray[filling_1];
-}
-function filling2plz(){
-    var filling_1 = Math.floor((Math.random() * 27) + 0);
-    var fillingArray = ["Olives","Turkey","Cucumber","Gherkins","Lettuce","Red Onions","Crispy Onions","Coleslaw","Mixed Peppers","Chicken Tikka","Jalapenos","Egg Mayonnaise","Tuna","Mushrooms","Wedges","Cheese","Stuffing","Tomato","Sundried Tomato","Egg","Rashers","Sweetcorn","Beetroot","Veg Salad","Ham","Couscous","-"];
-	document.getElementById("filling2").innerHTML = fillingArray[filling_1];
-}
-function filling3plz(){
-    var filling_1 = Math.floor((Math.random() * 27) + 0);
-    var fillingArray = ["Olives","Turkey","Cucumber","Gherkins","Lettuce","Red Onions","Crispy Onions","Coleslaw","Mixed Peppers","Chicken Tikka","Jalapenos","Egg Mayonnaise","Tuna","Mushrooms","Wedges","Cheese","Stuffing","Tomato","Sundried Tomato","Egg","Rashers","Sweetcorn","Beetroot","Veg Salad","Ham","Couscous","-"];
-	document.getElementById("filling3").innerHTML = fillingArray[filling_1];
-}
+
 </script>
 </html>
