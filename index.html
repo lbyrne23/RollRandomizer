@@ -9,12 +9,21 @@
   <style>
     
 	body {
+		background-image: url("https://i.imgur.com/AT0jPLb.gif");
+		text-align: center;
+	}
+	#app {
+		width: 50%;
 		background-color: #ffffff;
 		font-family: News Cycle;
+		position: absolute;
+		left: 25%;
+		text-align: center;
+		border: solid 1px black;
 	}
 	
 	
-	#options p {
+	#options .out {
 		text-align: center;
 	    font-weight: bold;
 	    color: #ffd900;
@@ -22,13 +31,8 @@
 	    border-radius: 1em;
 		border: 1em solid #008c99;
 		font-size: 1.5em;
+		width: 100%;
 	}
-
-	
-    #giz {
-        text-align: center;
-	
-    }
        
 		
     #clickMe {
@@ -44,12 +48,9 @@
 	#clickMe:hover{
 		color: yellow;
 	}
-	#buttons{
-		text-align: center;
-	}
 	
-	#buttons input{
-		border-radius:0.5em;
+	#options input {
+		 border-radius:0.5em;
 		border: light grey;
 		font-size: 1em;
 		color: white;
@@ -57,40 +58,43 @@
 		font-family: 'News Cycle';
 	}
 	
-	#buttons input:hover {
+	#options input:hover {
 		color: yellow;
 	}
+	
+	.line p{
+		display: inline;
+	}
+	
+	.line {
+		margin: 9%;
+	}
+	
+	.line input {
+		margin-right: 5%;
+	}
+	
+	
  
   </style>
 <body>
 
+<div id="app">
 <div>
 <p id="giz"><input id="clickMe" type="button" value="giz a roll there" onclick="chicky();" /></p>
 </div>
 
-<div id="buttons">
-<h3> Click to change individual ingredients: </h3>
-<input id="newbread" type="button" value="bread" onclick="breadplz();" />
-<input id="newchick" type="button" value="chicken" onclick="chickplz();" />
-<input id="newbutter" type="button" value="butter" onclick="butterplz();" />
-<input id="newsauce" type="button" value="sauce" onclick="sauceplz();" />
-<input id="newfilling" type="button" value="filling 1" onclick="fillingplz();" />
-<input id="newfilling2" type="button" value="filling 2" onclick="filling2plz();" />
-<input id="newfilling3" type="button" value="filling 3" onclick="filling3plz();" />
-</div>
-
 <div id="options">
-	<p id="bread"></p>
-	<p id="chicken"></p>
-	<p id="butter"></p>
-	<p id="sauce"></p>
+	<div class="line"><input id="newbread" type="button" value="change bread" onclick="breadplz();" /> <p class= "out" id="bread"></p></div>
+	<div class="line"><input id="newchick" type="button" value="change chicken" onclick="chickplz();" /><p class= "out" id="chicken"></p></div>
+	<div class="line"><input id="newbutter" type="button" value="change butter" onclick="butterplz();" /> <p class= "out" id="butter"></p></div>
+	<div class="line"><input id="newsauce" type="button" value="change sauce" onclick="sauceplz();" /><p class= "out" id="sauce"></p></div>
 	
-	<p id="filling1"></p>
-	<p id="filling2"></p>
-	<p id="filling3"></p>
+	<div class="line"><input id="newfilling" type="button" value="change filling 1" onclick="fillingplz();" /><p class= "out" id="filling1"></p></div>
+	<div class="line"><input id="newfilling2" type="button" value="change filling 2" onclick="filling2plz();" /><p class= "out" id="filling2"></p></div>
+	<div class="line"><input id="newfilling3" type="button" value="change filling 3" onclick="filling3plz();" /><p class= "out" id="filling3"></p></div>
 </div>
-
-
+</div>
 <script>
 
 function chicky(){
@@ -153,19 +157,19 @@ function chickplz(){
 }
 
 function fillingplz(){
-    var filling_1 = Math.floor((Math.random() *34) + 0);
+    var filling_1 = Math.floor((Math.random() * 27) + 0);
     var fillingArray = ["Olives","Turkey","Cucumber","Gherkins","Lettuce","Red Onions","Crispy Onions","Coleslaw","Mixed Peppers","Chicken Tikka","Jalapenos","Egg Mayonnaise","Tuna","Mushrooms","Wedges","Cheese","Stuffing","Tomato","Sundried Tomato","Egg","Rashers","Sweetcorn","Beetroot","Veg Salad","Ham","Couscous","-"];
 	document.getElementById("filling1").innerHTML = fillingArray[filling_1];
 }
 
 function filling2plz(){
-    var filling_1 = Math.floor((Math.random() *34) + 0);
+    var filling_1 = Math.floor((Math.random() * 27) + 0);
     var fillingArray = ["Olives","Turkey","Cucumber","Gherkins","Lettuce","Red Onions","Crispy Onions","Coleslaw","Mixed Peppers","Chicken Tikka","Jalapenos","Egg Mayonnaise","Tuna","Mushrooms","Wedges","Cheese","Stuffing","Tomato","Sundried Tomato","Egg","Rashers","Sweetcorn","Beetroot","Veg Salad","Ham","Couscous","-"];
 	document.getElementById("filling2").innerHTML = fillingArray[filling_1];
 }
 
 function filling3plz(){
-    var filling_1 = Math.floor((Math.random() * 34) + 0);
+    var filling_1 = Math.floor((Math.random() * 27) + 0);
     var fillingArray = ["Olives","Turkey","Cucumber","Gherkins","Lettuce","Red Onions","Crispy Onions","Coleslaw","Mixed Peppers","Chicken Tikka","Jalapenos","Egg Mayonnaise","Tuna","Mushrooms","Wedges","Cheese","Stuffing","Tomato","Sundried Tomato","Egg","Rashers","Sweetcorn","Beetroot","Veg Salad","Ham","Couscous","-"];
 	document.getElementById("filling3").innerHTML = fillingArray[filling_1];
 }
